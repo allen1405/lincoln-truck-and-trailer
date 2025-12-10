@@ -1,0 +1,8 @@
+# Robots.txt for Lincoln Truck and Trailer Repair
+# https://lincolntruckrepair.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://lincolntruckrepair.com/sitemap.xml
