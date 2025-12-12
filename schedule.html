@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Free Inspection | Lincoln Truck and Trailer Repair</title>
+    <meta name="description" content="Schedule a free truck or trailer inspection with Lincoln Truck and Trailer Repair in Lincoln, Nebraska.">
+    <link rel="canonical" href="https://lincolntruckrepair.com/schedule.html">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lincolntruckrepair.com/schedule.html">
+    <meta property="og:title" content="Schedule Free Inspection | Lincoln Truck and Trailer Repair">
+    <meta property="og:description" content="Schedule a free truck or trailer inspection with our expert team in Lincoln, Nebraska.">
+    <meta property="og:image" content="https://lincolntruckrepair.com/hero-background.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #DC143C;
+            --dark-red: #B01030;
+            --black: #0A0A0A;
+            --gray-dark: #1A1A1A;
+            --gray-medium: #2D2D2D;
+            --gray-light: #666666;
+            --white: #FFFFFF;
+            --off-white: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--black);
+            background: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .logo .red {
+            color: var(--primary-red);
+        }
+
+        .logo .white {
+            color: var(--white);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            border: 2px solid var(--white);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-nav:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .btn-nav.active {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .phone-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.6rem 1.5rem;
+            background: var(--primary-red);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-header:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
+        }
+
+        /* Page Header */
+        .page-header {
+            padding-top: 120px;
+            padding-bottom: 3rem;
+            background: linear-gradient(135deg, var(--black) 0%, var(--gray-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(220, 20, 60, .05) 2px, rgba(220, 20, 60, .05) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(220, 20, 60, .05) 2px, rgba(220, 20, 60, .05) 4px);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--off-white);
+            line-height: 1.8;
+        }
+
+        /* Form Container */
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .form-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-intro h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .form-intro p {
+            color: var(--gray-light);
+            font-size: 1rem;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .form-group label .optional {
+            font-weight: 400;
+            color: var(--gray-light);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Work Sans', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--primary-red);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .success-message p {
+            color: var(--gray-light);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: var(--primary-red);
+            color: var(--white);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home-btn:hover {
+            background: var(--dark-red);
+        }
+
+        /* Hide form when success shows */
+        .form-content.hide {
+            display: none;
+        }
+
+        /* Contact Alternative */
+        .contact-alternative {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-alternative p {
+            color: var(--gray-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-alternative a {
+            color: var(--primary-red);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-alternative a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 2px solid var(--primary-red);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-logo .red {
+            color: var(--primary-red);
+        }
+
+        .footer-logo .white {
+            color: var(--white);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .copyright {
+            color: var(--gray-light);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-medium);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn-nav {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.8rem;
+            }
+
+            .phone-header {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .form-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><span class="red">LINCOLN</span> <span class="white">TRUCK & TRAILER</span></a>
+            <div class="nav-buttons">
+                <a href="qa-forum.html" class="btn-nav">Q&A Forum</a>
+                <a href="schedule.html" class="btn-nav active">Free Inspection</a>
+                <a href="tel:4024091984" class="phone-header">
+                    📞 (402) 409-1984
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Schedule Free Inspection</h1>
+            <p class="page-subtitle">
+                Fill out the form below and one of our team members will reach out to confirm your appointment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Form Container -->
+    <section class="form-container">
+        <div class="form-card">
+            <!-- Success Message (hidden by default) -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✅</div>
+                <h2>Thank You!</h2>
+                <p>One of our team members will reach out within one business day to confirm your appointment.</p>
+                <a href="index.html" class="back-home-btn">Back to Home</a>
+            </div>
+
+            <!-- Form Content -->
+            <div class="form-content" id="formContent">
+                <div class="form-intro">
+                    <h2>Request Your Free Inspection</h2>
+                    <p>No obligation. We'll assess your truck or trailer and provide an honest evaluation.</p>
+                </div>
+
+                <!-- IMPORTANT: Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree form ID -->
+                <form id="inspectionForm" action="https://formspree.io/f/xrbnorey" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company <span class="optional">(Optional)</span></label>
+                        <input type="text" id="company" name="company" placeholder="Your company name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="preferred_date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Preferred Time *</label>
+                            <select id="time" name="preferred_time" required>
+                                <option value="">Select a time</option>
+                                <option value="8:00 AM">8:00 AM</option>
+                                <option value="9:00 AM">9:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="1:00 PM">1:00 PM</option>
+                                <option value="2:00 PM">2:00 PM</option>
+                                <option value="3:00 PM">3:00 PM</option>
+                                <option value="4:00 PM">4:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Schedule Inspection</button>
+                </form>
+
+                <div class="contact-alternative">
+                    <p>Need immediate assistance?</p>
+                    <a href="tel:4024091984">Call us now: (402) 409-1984</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo"><span class="red">LINCOLN</span> <span class="white">TRUCK & TRAILER</span></div>
+            <p style="margin: 1rem 0;">Big or Small, We Service Them All!</p>
+            
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#why-choose">Why Choose Us</a>
+                <a href="index.html#reviews">Reviews</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="qa-forum.html">Q&A Forum</a>
+                <a href="schedule.html">Free Inspection</a>
+            </div>
+
+            <p class="copyright">
+                © 2024 Lincoln Truck and Trailer Repair LLC. All rights reserved.<br>
+                Professional Truck & Trailer Repair in Lincoln, Nebraska
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Handle form submission
+        const form = document.getElementById('inspectionForm');
+        const formContent = document.getElementById('formContent');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Hide form, show success message
+                    formContent.classList.add('hide');
+                    successMessage.classList.add('show');
+                    
+                    // Scroll to top of form card
+                    document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('There was an error submitting the form. Please try again or call us directly.');
+                }
+            } catch (error) {
+                alert('There was an error submitting the form. Please try again or call us directly.');
+            }
+        });
+
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+    </script>
+</body>
+</html>
