@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A Forum | Lincoln Truck and Trailer Repair</title>
-    <meta name="description" content="Get your truck and trailer repair questions answered by our expert team in Lincoln, Nebraska.">
+    <title>Ask a Question | Lincoln Truck and Trailer Repair</title>
+    <meta name="description" content="Have a question about truck or trailer repair? Ask our expert team at Lincoln Truck and Trailer Repair in Lincoln, Nebraska.">
+    <link rel="canonical" href="https://lincolntruckrepair.com/ask.html">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lincolntruckrepair.com/ask.html">
+    <meta property="og:title" content="Ask a Question | Lincoln Truck and Trailer Repair">
+    <meta property="og:description" content="Have a question about truck or trailer repair? Get expert answers from our team.">
+    <meta property="og:image" content="https://lincolntruckrepair.com/hero-background.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -77,7 +86,7 @@
             align-items: center;
         }
 
-        .btn-qa {
+        .btn-nav {
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -93,12 +102,12 @@
             white-space: nowrap;
         }
 
-        .btn-qa:hover {
+        .btn-nav:hover {
             background: var(--white);
             color: var(--black);
         }
 
-        .btn-qa.active {
+        .btn-nav.active {
             background: var(--white);
             color: var(--black);
         }
@@ -168,133 +177,183 @@
         .page-subtitle {
             font-size: 1.2rem;
             color: var(--off-white);
-            margin-bottom: 2rem;
             line-height: 1.8;
         }
 
-        .ask-question-btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
+        /* Form Container */
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .form-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-intro h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .form-intro p {
+            color: var(--gray-light);
+            font-size: 1rem;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .form-group label .optional {
+            font-weight: 400;
+            color: var(--gray-light);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Work Sans', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem 2rem;
             font-size: 1.1rem;
             font-weight: 600;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
             background: var(--primary-red);
             color: var(--white);
-            border: 2px solid var(--primary-red);
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Oswald', sans-serif;
         }
 
-        .ask-question-btn:hover {
+        .submit-btn:hover {
             background: var(--dark-red);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
         }
 
-        /* QA Container */
-        .qa-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .qa-intro {
+        /* Success Message */
+        .success-message {
+            display: none;
             text-align: center;
-            margin-bottom: 3rem;
+            padding: 3rem;
         }
 
-        .qa-intro h2 {
+        .success-message.show {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message h2 {
             font-family: 'Oswald', sans-serif;
             font-size: 2rem;
-            margin-bottom: 1rem;
             color: var(--black);
+            margin-bottom: 1rem;
         }
 
-        .qa-intro p {
+        .success-message p {
             color: var(--gray-light);
             font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* QA Grid */
-        .qa-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .qa-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--primary-red);
-        }
-
-        .qa-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.2);
-        }
-
-        .question {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.3rem;
-            color: var(--black);
-            margin-bottom: 1rem;
-            font-weight: 600;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-
-        .question::before {
-            content: 'Q:';
-            color: var(--primary-red);
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        .answer {
-            color: var(--gray-light);
-            line-height: 1.8;
-            font-size: 1.05rem;
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .answer::before {
-            content: 'A:';
-            color: var(--primary-red);
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--gray-dark);
-            color: var(--white);
-            padding: 4rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .cta-section h2 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            color: var(--off-white);
             margin-bottom: 2rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: var(--primary-red);
+            color: var(--white);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .back-btn:hover {
+            background: var(--dark-red);
+        }
+
+        .back-btn.secondary {
+            background: var(--gray-dark);
+        }
+
+        .back-btn.secondary:hover {
+            background: var(--black);
+        }
+
+        /* Hide form when success shows */
+        .form-content.hide {
+            display: none;
+        }
+
+        /* Contact Alternative */
+        .contact-alternative {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-alternative p {
+            color: var(--gray-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-alternative a {
+            color: var(--primary-red);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-alternative a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -369,7 +428,7 @@
                 gap: 0.5rem;
             }
 
-            .btn-qa {
+            .btn-nav {
                 font-size: 0.85rem;
                 padding: 0.5rem 0.8rem;
             }
@@ -383,24 +442,8 @@
                 font-size: 2rem;
             }
 
-            .page-subtitle {
-                font-size: 1rem;
-            }
-
-            .qa-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .qa-card {
-                padding: 1.5rem;
-            }
-
-            .question {
-                font-size: 1.1rem;
-            }
-
-            .answer {
-                font-size: 1rem;
+            .form-card {
+                padding: 2rem 1.5rem;
             }
         }
 
@@ -416,8 +459,8 @@
         <nav>
             <a href="index.html" class="logo"><span class="red">LINCOLN</span> <span class="white">TRUCK & TRAILER</span></a>
             <div class="nav-buttons">
-                <a href="qa-forum.html" class="btn-qa active">Q&A Forum</a>
-                <a href="schedule.html" class="btn-qa">Free Inspection</a>
+                <a href="qa-forum.html" class="btn-nav">Q&A Forum</a>
+                <a href="schedule.html" class="btn-nav">Free Inspection</a>
                 <a href="tel:4024091984" class="phone-header">
                     📞 (402) 409-1984
                 </a>
@@ -428,114 +471,67 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="page-header-content">
-            <h1 class="page-title">Questions & Answers</h1>
+            <h1 class="page-title">Ask a Question</h1>
             <p class="page-subtitle">
-                Free expert advice on truck and trailer repairs. Get honest answers from our experienced team. 
-                Don't see your question? Ask us anything!
+                Have a question about truck or trailer repair? Ask our expert team and we'll get back to you with an honest answer.
             </p>
-            <a href="ask.html" class="ask-question-btn">
-                ✉️ Ask a Question
-            </a>
         </div>
     </section>
 
-    <!-- QA Container -->
-    <section class="qa-container">
-        <div class="qa-intro">
-            <h2>Frequently Asked Questions</h2>
-            <p>Browse common questions from truck drivers and fleet operators. We're here to help with honest, expert advice.</p>
-        </div>
-
-        <div class="qa-grid">
-            <!-- Q&A Card 1 -->
-            <div class="qa-card">
-                <div class="question">Do you service refrigerated (reefer) trailers?</div>
-                <div class="answer">
-                    Absolutely! We service all types of trailers including refrigerated units. Our technicians are experienced with reefer systems, 
-                    electrical issues, and temperature control diagnostics. Whether it's a Thermo King or Carrier unit, we can handle it.
-                </div>
+    <!-- Form Container -->
+    <section class="form-container">
+        <div class="form-card">
+            <!-- Success Message (hidden by default) -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✅</div>
+                <h2>Question Submitted!</h2>
+                <p>Thank you for your question. One of our team members will get back to you within one business day with an answer.</p>
+                <a href="qa-forum.html" class="back-btn">Browse Q&A Forum</a>
+                <a href="index.html" class="back-btn secondary">Back to Home</a>
             </div>
 
-            <!-- Q&A Card 2 -->
-            <div class="qa-card">
-                <div class="question">What payment methods do you accept?</div>
-                <div class="answer">
-                    We accept cash, all major credit cards (Visa, MasterCard, Discover, American Express), debit cards, and checks from established 
-                    fleet accounts. For large jobs, we can work with you on payment arrangements. Give us a call to discuss your specific situation.
+            <!-- Form Content -->
+            <div class="form-content" id="formContent">
+                <div class="form-intro">
+                    <h2>What's Your Question?</h2>
+                    <p>No question is too big or too small. We're here to help with honest, expert advice.</p>
                 </div>
-            </div>
 
-            <!-- Q&A Card 3 -->
-            <div class="qa-card">
-                <div class="question">How long does a typical repair take?</div>
-                <div class="answer">
-                    It depends on the issue. Minor repairs like brake adjustments or light replacements can be done in 1-2 hours. 
-                    More complex repairs like engine diagnostics or transmission work may take several hours to a full day. 
-                    We'll always give you an honest time estimate upfront and keep you updated throughout the process.
-                </div>
-            </div>
+                <form id="questionForm" action="https://formspree.io/f/xrbnorey" method="POST">
+                    
+                    <!-- Hidden field to identify this as a question (not scheduling) -->
+                    <input type="hidden" name="_subject" value="New Question from Website">
+                    <input type="hidden" name="form_type" value="Question">
+                    
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
 
-            <!-- Q&A Card 4 -->
-            <div class="qa-card">
-                <div class="question">Do you offer mobile/roadside diagnostics and repairs?</div>
-                <div class="answer">
-                    Yes! We offer 24/7 roadside service throughout the Lincoln area. Our mobile team can diagnose issues on-site and perform many 
-                    repairs right where you're stranded. If the repair requires shop equipment, we can arrange towing. Call us anytime at (402) 409-1984 
-                    for emergency roadside assistance.
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
 
-            <!-- Q&A Card 5 -->
-            <div class="qa-card">
-                <div class="question">Can you work on custom or modified trailers?</div>
-                <div class="answer">
-                    Definitely! We've worked on all kinds of specialty and custom trailers - from heavily modified show trucks to unique agricultural 
-                    trailers. Our team has the experience and problem-solving skills to handle non-standard equipment. Bring it in and we'll take a look.
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="optional">(Optional)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+                    </div>
 
-            <!-- Q&A Card 6 -->
-            <div class="qa-card">
-                <div class="question">Do you provide warranties on your repairs?</div>
-                <div class="answer">
-                    Yes, we stand behind our work. Most repairs come with a parts and labor warranty - the specific terms depend on the type of repair 
-                    and parts used. We'll clearly explain the warranty coverage before starting any work. Our goal is to get you back on the road 
-                    safely and keep you running reliably.
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="question">Your Question *</label>
+                        <textarea id="question" name="question" required placeholder="Type your question here... Be as detailed as you'd like!"></textarea>
+                    </div>
 
-            <!-- Q&A Card 7 -->
-            <div class="qa-card">
-                <div class="question">Do you work with insurance companies for accident repairs?</div>
-                <div class="answer">
-                    Yes, we can work with your insurance company for collision repairs and accident-related damage. We'll provide detailed estimates 
-                    and documentation needed for your claim. Whether it's body work, frame straightening, or mechanical repairs after an incident, 
-                    we've got you covered.
-                </div>
-            </div>
+                    <button type="submit" class="submit-btn">Submit Question</button>
+                </form>
 
-            <!-- Q&A Card 8 -->
-            <div class="qa-card">
-                <div class="question">What's the difference between budget and premium parts?</div>
-                <div class="answer">
-                    Budget parts are aftermarket options that meet industry standards and work well for many applications. Premium parts are typically 
-                    OEM (Original Equipment Manufacturer) or higher-grade aftermarket with longer warranties and proven reliability. We'll recommend 
-                    what makes sense for your situation and budget - sometimes budget parts are perfectly fine, other times premium is worth the investment.
+                <div class="contact-alternative">
+                    <p>Need immediate assistance?</p>
+                    <a href="tel:4024091984">Call us now: (402) 409-1984</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2>Still Have Questions?</h2>
-        <p>We're here to help. Send us your question and we'll get back to you with an honest answer.</p>
-        <a href="ask.html" class="ask-question-btn">
-            ✉️ Ask Your Question
-        </a>
-        <p style="margin-top: 2rem; font-size: 1rem;">
-            Or call us directly: <a href="tel:4024091984" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">(402) 409-1984</a>
-        </p>
     </section>
 
     <!-- Footer -->
@@ -561,5 +557,40 @@
         </div>
     </footer>
 
+    <script>
+        // Handle form submission
+        const form = document.getElementById('questionForm');
+        const formContent = document.getElementById('formContent');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Hide form, show success message
+                    formContent.classList.add('hide');
+                    successMessage.classList.add('show');
+                    
+                    // Scroll to top of form card
+                    document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('There was an error submitting your question. Please try again or call us directly.');
+                }
+            } catch (error) {
+                alert('There was an error submitting your question. Please try again or call us directly.');
+            }
+        });
+    </script>
 </body>
 </html>
